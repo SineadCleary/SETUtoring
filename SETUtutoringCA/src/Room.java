@@ -26,19 +26,10 @@ public class Room {
         }
     }
 
-    public int determineRoomCapacity(int roomNumber) {
+    public String RoomExists(int roomNumber) {
         if (roomNumber < 1 || roomNumber > 5) {
-            throw new IllegalArgumentException("Room does not exist");
-        } else if (roomNumber == 1) {
-            setCapacity(8);
-        } else if (roomNumber == 2) {
-            setCapacity(3);
-        } else if (roomNumber == 3) {
-            setCapacity(9);
-        } else {
-            setCapacity(2);
-        }
-        return roomNumber;
+            return ("Room does not exist");
+        } else return ("Valid room number entered");
     }
 
     @Override
